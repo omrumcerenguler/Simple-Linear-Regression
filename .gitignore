@@ -1,6 +1,7 @@
 # Ortam değişkenleri
 .env
 .sql
+
 # R geçici dosyaları ve proje ayarları
 .Rhistory
 .RData
@@ -14,3 +15,12 @@
 # Geçici dosyalar
 *.tmp
 *.log
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Yedek dosyalar
+*.bak
+*.old
+*.swp
