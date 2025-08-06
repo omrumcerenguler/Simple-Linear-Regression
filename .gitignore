@@ -1,1 +1,21 @@
+# Ortam değişkenleri
 .env
+.sql
+# R geçici dosyaları ve proje ayarları
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# CSV ve Excel dosyaları (ham veri)
+*.csv
+!sample_*.csv
+
+# Geçici dosyalar
+*.tmp
+*.log
+
+# Çıktı görselleri
+*.png
+*.jpeg
+*.jpg
