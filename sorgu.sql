@@ -1,1 +1,0 @@
-dbGetQuery(con, "SELECT TOP 10 * FROM WosHitAttributes");
