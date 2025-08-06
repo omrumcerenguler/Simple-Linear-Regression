@@ -14,8 +14,3 @@
 # Geçici dosyalar
 *.tmp
 *.log
-
-# Çıktı görselleri
-*.png
-*.jpeg
-*.jpg
