@@ -1,10 +1,11 @@
-# Akademik Yayın Analizi ve 2026 Tahmin Projesi  
+# Akademik Yayın Analizi ve 2025 Tahmin Projesi  
 
 > **Not:** Eğer sunucuya bağlanılamazsa, proje otomatik olarak örnek veri setini kullanacaktır.
 
 ## 📌 Proje Amacı
-Bu proje, Çukurova Üniversitesi akademik yayın verilerini analiz ederek **birim** ve **araştırma alanı** bazında yayın trendlerini incelemek ve **2026 yılı için tahminler** yapmak amacıyla geliştirilmiştir.  
-Proje kapsamında, geçmiş yıllara ait yayın verileri kullanılarak hangi birimlerin ve araştırma alanlarının öne çıktığı, hangi alanların hızlı büyüdüğü ve gelecek yıllarda beklenen yayın sayıları gibi öngörüler sunulmaktadır.
+Bu proje, Çukurova Üniversitesi akademik yayın verilerini analiz ederek **birim** ve **araştırma alanı** bazında yayın trendlerini incelemek ve **2025 yılı için tahminler** yapmak amacıyla geliştirilmiştir.  
+Proje kapsamında, geçmiş yıllara ait yayın verileri kullanılarak hangi birimlerin ve araştırma alanlarının öne çıktığı, hangi alanların hızlı büyüdüğü ve gelecek yıllarda beklenen yayın sayıları gibi öngörüler sunulmaktadır.  
+**Bu proje sadece 2025 yılı için sabit tahmin üretmektedir.**
 
 ---
 
@@ -21,19 +22,19 @@ Proje kapsamında, geçmiş yıllara ait yayın verileri kullanılarak hangi bir
 
 ## 🛠 Kullanılan Teknolojiler
 - **R** – Veri işleme, analiz ve görselleştirme
-- Kullanılan R kütüphaneleri: `dplyr`, `ggplot2`, `DBI`, `odbc`, `dotenv`
+- Kullanılan R kütüphaneleri: `dplyr`, `ggplot2`, `DBI`, `odbc`, `dotenv`, `showtext`
 - **SQL Server** – Veri kaynağı
 
 ---
 
 ## 🔍 Yapılan Analizler
 1. **En çok yayın yapan birimler**
-2. **Yazar bazlı 2026 yılı tahminleri**
+2. **Yazar bazlı 2025 yılı tahminleri**
 3. **En hızlı büyüyen araştırma alanları**
 4. **En hızlı büyüyen birimler**
 5. **Birimlere göre en popüler araştırma alanları**
-6. **Alan ve birim bazlı 2026 yılı tahmin karşılaştırmaları**
-7. **Model karşılaştırması** – Doğrusal regresyon ve basit ortalama
+6. **Alan ve birim bazlı 2025 yılı tahmin karşılaştırmaları**
+7. **Model karşılaştırması** – Doğrusal regresyon ve basit ortalama yöntemleri kullanılmıştır.  
 
 ---
 
@@ -43,18 +44,20 @@ Proje çalıştırıldığında elde edilen görseller:
 - `en_hizli_buyuyen_10_alan.png`
 - `en_hizli_buyuyen_10_birim.png`
 - `birimlere_gore_yayin_alanlari.png`
-- `tahmin_karsilastirma_2026.png`
-- `model_karsilastirma_2026.png`
+- `tahmin_karsilastirma_2025.png`
+- `model_karsilastirma_2025.png`
+
+**Not:** Girdi doğrulama yapılmakta olup, sunucu bağlantısı başarısız olduğunda proje otomatik olarak örnek veri setini kullanmaktadır.
 
 ---
 
 ## ▶️ Çalıştırma
-1. `.env` dosyasında veritabanı bağlantı bilgilerinizi girin.
-2. R ortamında (`Rscript` veya RStudio) aşağıdaki komutu çalıştırın:
+1. `.env` dosyasında veritabanı bağlantı bilgilerinizi girin.  
+2. R ortamında (`Rscript` veya RStudio) aşağıdaki komutu çalıştırın:  
    ```bash
    Rscript proje.r
-   ```
-3. Çıktılar proje klasörüne otomatik olarak kaydedilecektir.
+   ```  
+3. Çıktılar (PNG görseller) proje klasörüne otomatik olarak kaydedilir. Bu proje, 2025 yılı için sabit tahmin üretir.
 
 ---
 
@@ -63,13 +66,14 @@ Proje çalıştırıldığında elde edilen görseller:
 
 ---
 
-# Academic Publication Analysis and 2026 Forecast Project  
+# Academic Publication Analysis and 2025 Forecast Project  
 
 > **Note:** If the server connection fails, the project will automatically use the sample dataset.
 
 ## 📌 Project Purpose
-This project analyzes Çukurova University academic publication data to examine publication trends **by department** and **by research field**, and to make **forecasts for 2026**.  
-Using past years' data, the project provides insights into which departments and research fields are leading, which areas are growing rapidly, and the expected number of publications in the coming years.
+This project analyzes Çukurova University academic publication data to examine publication trends **by department** and **by research field**, and to make **forecasts for 2025**.  
+Using past years' data, the project provides insights into which departments and research fields are leading, which areas are growing rapidly, and the expected number of publications in the coming years.  
+**This project produces a fixed forecast only for the year 2025.**
 
 ---
 
@@ -86,19 +90,19 @@ Using past years' data, the project provides insights into which departments and
 
 ## 🛠 Technologies Used
 - **R** – Data processing, analysis, and visualization
-- R libraries used: `dplyr`, `ggplot2`, `DBI`, `odbc`, `dotenv`
+- R libraries used: `dplyr`, `ggplot2`, `DBI`, `odbc`, `dotenv`, `showtext`
 - **SQL Server** – Data source
 
 ---
 
 ## 🔍 Analyses Performed
 1. **Top publishing departments**
-2. **Author-based forecasts for 2026**
+2. **Author-based forecasts for 2025**
 3. **Fastest-growing research fields**
 4. **Fastest-growing departments**
 5. **Most popular research fields per department**
-6. **2026 forecast comparisons by field and department**
-7. **Model comparison** – Linear regression and simple average
+6. **2025 forecast comparisons by field and department**
+7. **Model comparison** – Linear regression and simple average methods have been used.  
 
 ---
 
@@ -108,18 +112,20 @@ Visual outputs generated by the project:
 - `en_hizli_buyuyen_10_alan.png`
 - `en_hizli_buyuyen_10_birim.png`
 - `birimlere_gore_yayin_alanlari.png`
-- `tahmin_karsilastirma_2026.png`
-- `model_karsilastirma_2026.png`
+- `tahmin_karsilastirma_2025.png`
+- `model_karsilastirma_2025.png`
+
+**Note:** Input validation is performed, and if the server connection fails, the project automatically uses the sample dataset.
 
 ---
 
 ## ▶️ Running the Project
-1. Set your database credentials in the `.env` file.
-2. In an R environment (`Rscript` or RStudio), run:
+1. Set your database credentials in the `.env` file.  
+2. In an R environment (`Rscript` or RStudio), run:  
    ```bash
    Rscript proje.r
-   ```
-3. The outputs will be automatically saved to the project folder.
+   ```  
+3. Outputs (PNG figures) are automatically saved to the project folder. This project produces a fixed forecast for the year 2025.
 
 ---
 
